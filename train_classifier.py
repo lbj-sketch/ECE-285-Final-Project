@@ -264,7 +264,7 @@ def run_experiment(
         if os.path.exists(c_dir):
             synthetic_counts[c] = len([f for f in os.listdir(c_dir) if f.endswith((".png", ".jpg"))])
 
-    # 3. 决定增强目标值（使用 75% 分位数，即“中位数靠右”，向大类看齐但避开极端的 nv 类）
+    
     counts_list = list(real_class_counts.values())
     target_count = int(np.percentile(counts_list, 75)) # approximately around 850
     minority_classes = [c for c, n in real_class_counts.items() if n < target_count]
