@@ -380,9 +380,7 @@ def compute_fid_is(gen_dir=GEN_DIR, real_dir=REAL_DIR, results_file=RESULTS_FILE
     }
 
 
-# ============================================================
-# 主程序
-# ============================================================
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="HAM10000 FID & IS Evaluation Script")
     parser.add_argument("--gen_dir", type=str, default=GEN_DIR,
